@@ -1,18 +1,7 @@
 /*
   ==============================================================================
 
-   This file is part of the DSP Workshop #2 happening at ADC18
-   Copyright (c) 2018 - Ivan COHEN
-
-   The code included in this file is provided under the terms of the ISC license
-   http://www.isc.org/downloads/software-support-policy/isc-license. Permission
-   To use, copy, modify, and/or distribute this software for any purpose with or
-   without fee is hereby granted provided that the above copyright notice and
-   this permission notice appear in all copies.
-
-   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY, AND ALL WARRANTIES,
-   WHETHER EXPRESSED OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR
-   PURPOSE, ARE DISCLAIMED.
+  Shaikat Hossain DSPExamples
 
   ==============================================================================
 */
@@ -22,25 +11,10 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 
 
-
-//==============================================================================
-/*
-    The PlotComponent class is a component which displays sets of two 
-    dimensional data, with optional grids and labels, linear or logarithmic X
-    axis, various types of lines and points, sets of colours etc.
-
-    To use it, you need to set the options as you wish, and push the data in
-    the component, using the setOptions and pushData functions. These functions
-    are thread-safe, but not written for speed and real-time continuous 
-    visualization.
-*/
 class PlotComponent : public Component, public AsyncUpdater
 {
 public:
-    //==============================================================================
-    /** The structure containing all the main information being used by
-        the PlotComponent for the data display.
-    */
+
     struct Information
     {
         String strTitle;
@@ -67,8 +41,7 @@ public:
         bool displayGridYValuesReverted = false;
     };
 
-    //==============================================================================
-    /** A structure with all the colours being used during painting. */
+
     struct ColourIDs
     {
         Colour backgroundColour = Colours::white;
@@ -82,8 +55,7 @@ public:
         Colour textColour = Colours::black;
     };
 
-    //==============================================================================
-    /** A structure with some additional information about the display layout. */
+
     struct PlotLayout
     {
         float marginX = 0.f;
@@ -112,10 +84,8 @@ public:
     };
     
     //==============================================================================
-    /** Constructor. */
     PlotComponent();
 
-    /** Destructor. */
     ~PlotComponent();
         
     //==============================================================================

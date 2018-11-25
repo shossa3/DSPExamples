@@ -17,10 +17,7 @@
 
 
 //==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
+
 class SessionSevenComponent : public SessionComponent, public Slider::Listener, 
     public ComboBox::Listener
 {
@@ -82,7 +79,7 @@ private:
     //==============================================================================
     SVFLowpassFilterNL theFiltersNL[2];
     dsp::LadderFilter<float> theMoogFilter;
-    DiodeClipperADC18 theDiodeClipper[2];
+    DiodeClipper theDiodeClipper[2];
     float centralFreq;
 
     bool isActive = false;

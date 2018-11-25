@@ -14,11 +14,7 @@
 #include "SessionFourDSP.h"
 
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
+
 class SessionFourComponent : public SessionComponent, public Slider::Listener, 
     public ComboBox::Listener
 {
@@ -53,10 +49,10 @@ private:
     //==============================================================================
     struct DynamicsCompressorState
     {
-        float thrlin, ratioinv;             // internal variables
-        float makeupgain;                   // internal variable
-        BallisticsFilter ballisticsFilter;  // internal object
-        bool mustUseBallistics;             // internal variable
+        float thrlin, ratioinv;
+        float makeupgain;
+        BallisticsFilter ballisticsFilter;  
+        bool mustUseBallistics;
     };
 
     DynamicsCompressorState theCompressor;

@@ -67,12 +67,12 @@ private:
     Diode clipper algorithm with TPT structure and Newton-Raphson's method to
     solve the nonlinearities
 */
-class DiodeClipperADC18
+class DiodeClipper
 {
 public:
     //==============================================================================
-    DiodeClipperADC18();
-    ~DiodeClipperADC18();
+    DiodeClipper();
+    ~DiodeClipper();
 
     //==============================================================================
     /** Initialization of the filter */
@@ -115,5 +115,5 @@ private:
     const double tolerance = 1e-12;
 
     //==============================================================================
-    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DiodeClipperADC18)
+    JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (DiodeClipper)
 };

@@ -13,19 +13,6 @@
 #include "../Session5/SessionFiveDSP.h"
 
 
-//==============================================================================
-/**
-    Envelope follower class.
-
-    This class provides a process which takes a given input signal, and returns
-    another signal with a value between 0 and 1, meant to modulate anything such
-    as a filter cutoff frequency, a volume control or any other parameter in an
-    audio effect or a synthesizer.
-
-    The API provides different ways to customize the behaviour of the envelope
-    signal generated, such as pre and post processing volume, ballistics filters
-    time etc.
-*/
 
 class EnvelopeFollower
 {

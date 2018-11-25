@@ -11,10 +11,6 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 
 
-//==============================================================================
-/**
-    Linear slew limiter class
-*/
 class LinearSlewLimiter
 {
 public:
@@ -40,13 +36,7 @@ private:
 };
 
 
-//==============================================================================
-/**
-    An IIR filter that can perform low, and high-pass filtering on an audio
-    signal, with 6 dB of attenuation / octave, using a TPT structure, designed
-    for fast modulation (see Vadim Zavalishin's documentation about TPT
-    structures for more information).
-*/
+
 class TPTFilter1stOrder
 {
 public:
@@ -56,13 +46,7 @@ public:
         TypeHighPass
     };
 
-    //==============================================================================
-    /** Creates a filter.
 
-        Initially the filter is inactive, so will have no effect on samples that
-        you process with it. Use the initProcessing and set methods to turn it into
-        the type of filter needed.
-    */
     TPTFilter1stOrder();
 
     /** Destructor. */

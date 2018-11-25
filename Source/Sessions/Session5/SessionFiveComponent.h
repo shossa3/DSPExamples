@@ -15,11 +15,7 @@
 #include "SessionFiveDSP.h"
 
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
+
 class SessionFiveComponent : public SessionComponent, public Slider::Listener, 
     public ComboBox::Listener
 {
@@ -64,12 +60,12 @@ private:
     //==============================================================================
     struct DynamicsCompressorState
     {
-        float thrlin, ratioinv;                 // internal variables
-        LinearSmoothedValue<float> makeupgain;  // internal variable
-        BallisticsFilter ballisticsFilter;      // internal object
-        TPTFilter1stOrder slewFilter;           // internal object
-        LinearSlewLimiter slewLimiter;          // internal object
-        int smoothingAlgorithm;                 // internal variable
+        float thrlin, ratioinv;                 
+        LinearSmoothedValue<float> makeupgain;
+        BallisticsFilter ballisticsFilter;
+        TPTFilter1stOrder slewFilter;
+        LinearSlewLimiter slewLimiter;
+        int smoothingAlgorithm;
     };
 
     DynamicsCompressorState theCompressor;

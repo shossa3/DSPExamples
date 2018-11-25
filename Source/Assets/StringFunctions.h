@@ -1,18 +1,7 @@
 /*
   ==============================================================================
 
-   This file is part of the DSP Workshop #2 happening at ADC18
-   Copyright (c) 2018 - Ivan COHEN
-
-   The code included in this file is provided under the terms of the ISC license
-   http://www.isc.org/downloads/software-support-policy/isc-license. Permission
-   To use, copy, modify, and/or distribute this software for any purpose with or
-   without fee is hereby granted provided that the above copyright notice and
-   this permission notice appear in all copies.
-
-   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT ANY WARRANTY, AND ALL WARRANTIES,
-   WHETHER EXPRESSED OR IMPLIED, INCLUDING MERCHANTABILITY AND FITNESS FOR
-   PURPOSE, ARE DISCLAIMED.
+  Shaikat Hossain DSPExamples
 
   ==============================================================================
 */
@@ -23,16 +12,10 @@
 
 
 //==============================================================================
-/**
-    A class that provides multiple functions related with Strings for 
-    visualization of data.
-*/
+
 struct StringFunctions
 {
-    //==============================================================================
-    /** This function returns an ideal representation for any given number in a
-        String which can be useful in visualisation of data components.
-    */
+
     template<typename FloatType>
     static const String getIdealRepresentationForNumber (FloatType value, FloatType reference)
     {
@@ -58,10 +41,7 @@ struct StringFunctions
             return String (value, 6).trimCharactersAtEnd ("0").trimCharactersAtEnd (".");
     }
 
-    //==============================================================================
-    /** This function returns a double value from a String containing both a value
-        and a character for a given unit, using LTSpice syntax.
-    */
+
     static const double getValueFromStringWithUnits (String strValue)
     {
         String strNumber, strUnit;
@@ -85,10 +65,7 @@ struct StringFunctions
         return result;
     }
 
-    //==============================================================================
-    /** This function returns a String from a given double variable using unit 
-        characters with LTSpice syntax.
-    */
+
     static const String getStringWithUnitsFromValue (double value, int numDecimals = 7)
     {
         String strResult;

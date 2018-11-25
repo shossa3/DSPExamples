@@ -90,7 +90,7 @@ void SVFLowpassFilterNL::updateProcessing()
 
 
 //==============================================================================
-DiodeClipperADC18::DiodeClipperADC18()
+DiodeClipperADC18::DiodeClipper()
 {
     frequency.store (1000.f);
     sampleRate = 44100.0;
@@ -98,12 +98,12 @@ DiodeClipperADC18::DiodeClipperADC18()
     isActive = false;
 }
 
-DiodeClipperADC18::~DiodeClipperADC18()
+DiodeClipperADC18::~DiodeClipper()
 {
 
 }
 
-void DiodeClipperADC18::initProcessing (double _sampleRate)
+void DiodeClipper::initProcessing (double _sampleRate)
 {
     jassert (_sampleRate > 0);
 
@@ -115,7 +115,7 @@ void DiodeClipperADC18::initProcessing (double _sampleRate)
     isActive = true;
 }
 
-void DiodeClipperADC18::setCutoffFrequency (float value)
+void DiodeClipper::setCutoffFrequency (float value)
 {
     jassert (value > 0.f && value < 0.5f * sampleRate);
 
@@ -123,13 +123,13 @@ void DiodeClipperADC18::setCutoffFrequency (float value)
     mustUpdateProcessing = true;
 }
 
-void DiodeClipperADC18::reset()
+void DiodeClipper::reset()
 {
     s1 = 0.f;
     output = 0.0;
 }
 
-float DiodeClipperADC18::processSingleSampleRaw (const float &sample)
+float DiodeClipper::processSingleSampleRaw (const float &sample)
 {
     if (!(isActive))
         return 0.f;
@@ -164,7 +164,7 @@ float DiodeClipperADC18::processSingleSampleRaw (const float &sample)
     return (float)output;
 }
 
-void DiodeClipperADC18::updateProcessing()
+void DiodeClipper::updateProcessing()
 {
     auto g = std::tan (float_Pi * frequency.load() / (float)sampleRate);
     G = g / (1 + g);

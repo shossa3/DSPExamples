@@ -11,12 +11,6 @@
 #include "../JuceLibraryCode/JuceHeader.h"
 
 
-//==============================================================================
-/**
-    This class applies attack / release ballistics on any audio envelope or
-    audio metering data, like a diode + R*R*C filter. It is useful for dynamics
-    processors and visualization of data.
-*/
 
 class BallisticsFilter
 {

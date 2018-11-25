@@ -15,11 +15,7 @@
 #include "../../Assets/LowFrequencyOscillator.h"
 
 
-//==============================================================================
-/*
-    This component lives inside our window, and this is where you should put all
-    your controls and content.
-*/
+
 class SessionSixComponent : public SessionComponent, public Slider::Listener, 
     public ComboBox::Listener
 {
